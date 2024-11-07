@@ -30,8 +30,8 @@ class AudioBook(EBook): #Inherited from EBook
 
     def __str__(self):
         # Return a formatted string with audiobook details, including parent class details
-        return (f"AudioBook:\n{super().__str__()}\nDuration: {self.__duration} min\n"
-                f"Narrator: {self.__narrator}\nFormat: {self.__audio_format}\nSize: {self.__file_size}MB")
+        return (f"AudioBook:\n{super().__str__()}\nDuration: {self._duration} min\n"
+                f"Narrator: {self._narrator}\nFormat: {self._audio_format}\nSize: {self._file_size}MB")
 
 class Customer:
     def __init__(self, name, contact_info, email, loyalty_status=False):
@@ -139,7 +139,3 @@ class Payment: #Association with Invoice
         # Return a formatted string with payment details
         return (f"Payment:\nPayment ID: {self.__payment_id}\nDate: {self.__payment_date}\n"
                 f"Amount: ${self.__amount:.2f}\nMethod: {self.__method}")
-
-
-
-
